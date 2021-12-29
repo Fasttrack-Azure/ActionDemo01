@@ -30,3 +30,6 @@ helm upgrade --namespace ns-qa --install --set image.tag=latest actiondemo01-api
 
 
 az aks update -n sidlab02 -g Barclays-02-RG --attach-acr barclaysacr02
+
+helm rollback -n ns-qa actiondemo01-api 2
+helm status actiondemo01-api -n ns-qa
