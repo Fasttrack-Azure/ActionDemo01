@@ -19,9 +19,9 @@ pvc:
   name: "actiondemo01pvc"
 
 image:
-  repository: "barclaysacr02.azurecr.io/actiondemo01"
+  repository: "bcglabacr01.azurecr.io/gettingstartedwithcontainers"
   # Overrides the image tag whose default is the chart appVersion.
-  tag: ""
+  tag: "v1"
 imagePullSecrets:
   name: acr-auth
 
