@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: {{values.app.name}}
+  name: {{ .Values.app.name }}
   annotations:
     kubernetes.io/ingress.class: nginx
     nginx.ingress.kubernetes.io/backend-protocol: "HTTP"
@@ -16,7 +16,7 @@ spec:
             - pathType: Prefix
               backend:
                 service:
-                  name: {{values.app.name}}
+                  name: {{ .Values.app.name }}
                   port:
-                    number: {{values.service.port}}
+                    number: {{ .Values.service.port }}
               path: /WeatherForecastAction
